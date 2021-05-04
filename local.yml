@@ -1,6 +1,0 @@
----
-- name: Run roles
-  hosts: all
-  roles:
-    - name: mt.software
-      become: yes
