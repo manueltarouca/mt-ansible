@@ -6,19 +6,19 @@
     state: latest
 
 - name: Install default packages
-  when: '"common" in mode_list'
+  when: '"common" in software_list'
   package:
     name: "{{ common_packages }}"
     state: present
 
 - name: Install development packages
-  when: '"dev" in mode_list'
+  when: '"dev" in software_list'
   package:
     name: "{{ development_packages }}"
     state: present
 
 - name: Install customization packages
-  when: '"rice" in mode_list'
+  when: '"rice" in software_list'
   package:
     name: "{{ customization_packages }}"
     state: present
