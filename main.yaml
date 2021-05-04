@@ -1,0 +1,6 @@
+---
+- name: Run roles
+  hosts: localhost
+  connection: local
+  roles:
+    - mt.software
