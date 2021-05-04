@@ -1,6 +1,24 @@
 ---
-- name: Install package default packages
-  become: yes
+
+- name: Make sure everything is updated
   package:
-    name: "{{ packages }}"
+    name: "*"
+    state: latest
+
+- name: Install default packages
+  when: '"common" in mode_list'
+  package:
+    name: "{{ common_packages }}"
+    state: present
+
+- name: Install development packages
+  when: '"dev" in mode_list'
+  package:
+    name: "{{ development_packages }}"
+    state: present
+
+- name: Install customization packages
+  when: '"rice" in mode_list'
+  package:
+    name: "{{ customization_packages }}"
     state: present

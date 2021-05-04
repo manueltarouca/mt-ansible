@@ -1,4 +1,16 @@
 ---
-packages:
-  - htop
-  - vim
+
+mode_list:
+- common
+- dev
+#- rice
+
+common_packages:
+- htop
+- vim
+
+development_packages:
+- git
+
+customization_packages:
+- teste
