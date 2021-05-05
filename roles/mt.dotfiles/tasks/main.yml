@@ -5,7 +5,7 @@
     src: "{{ item }}"
   loop: "{{ dotfiles_list }}"
 
-- name: Source bash dot file
+- name: Add source bash dot file to .bashrc
   when: '".bashrc_mt" in dotfiles_list'
   lineinfile:
     path: "~/.bashrc"

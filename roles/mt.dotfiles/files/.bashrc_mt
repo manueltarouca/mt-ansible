@@ -1,2 +1,3 @@
 # Custom aliases
 alias dc="cd"
+alias lsa="ls -la"

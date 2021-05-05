@@ -12,6 +12,7 @@ common_packages:
 development_packages:
 - git
 - python3
+- ansible
 
 customization_packages:
-- teste
+-
