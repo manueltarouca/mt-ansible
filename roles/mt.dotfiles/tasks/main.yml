@@ -1,2 +1,13 @@
 ---
-# tasks file for roles/mt.dotfiles
+- name: Deploy dot files
+  copy:
+    dest: "{{ home_dir }}"
+    src: "{{ item }}"
+  loop: "{{ dotfiles_list }}"
+
+- name: Source bash dot file
+  when: '".bashrc_mt" in dotfiles_list'
+  lineinfile:
+    path: "~/.bashrc"
+    line: ". .bashrc_mt"
+

@@ -1,2 +1,6 @@
 ---
-# defaults file for roles/mt.dotfiles
+home_dir: /home/mt/
+
+dotfiles_list:
+- .vimrc
+- .bashrc_mt

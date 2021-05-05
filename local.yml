@@ -5,3 +5,4 @@
   roles:
     - name: mt.software
       become: yes
+    - mt.dotfiles
